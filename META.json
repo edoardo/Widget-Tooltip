@@ -2,15 +2,15 @@
     "resources": {
         "license": "http://dev.perl.org/licenses/"
     },
-    "generated_by": "Module::Build version 0.2806",
+    "generated_by": "Module::Build version 0.2808",
     "meta-spec": {
         "version": 1.2,
         "url": "http://module-build.sourceforge.net/META-spec-v1.2.html"
     },
-    "version": 0.02,
+    "version": 0.03,
     "name": "Widget.Tooltip",
     "author": [
-        "Edoardo Sabadelli <http://www.sabadelli.it/edoardo>"
+        "Edoardo Sabadelli <edoardo.sabadelli@gmail.com>"
     ],
     "license": "perl",
     "keywords": [
@@ -19,9 +19,13 @@
     ],
     "provides": {
         "Widget.Tooltip": {
-            "version": 0.02,
+            "version": 0.03,
             "file": "lib/Widget/Tooltip.js"
         }
+    },
+    "requires": {
+        "JSAN": 0.1,
+        "DOM.Events": 0.02
     },
     "abstract": "Unobtrusive javascript class for create and handle tooltips"
 }

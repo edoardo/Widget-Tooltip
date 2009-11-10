@@ -1,5 +1,10 @@
 Revision history for JSAN Widget.Tooltip class
 
+0.03 Tue Oct  9 22:43:34 CEST 2007
+- Applied patch by Dave Rolsky.
+  Fixed top and left CSS properties initialization.
+  Now DOM.Event library is used instead of an internal event handler.
+ 
 0.02 Fri May  4 13:42:34 CEST 2007 
 - new(): added control on elementId mandatory parameter validity.
   The element must exists in the DOM tree.

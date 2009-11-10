@@ -152,7 +152,7 @@ SEE ALSO
 
 AUTHOR
 
-    Edoardo Sabadelli - http://www.sabadelli.it/edoardo
+    Edoardo Sabadelli, <edoardo.sabadelli@gmail.com>
 
 COPYRIGHT
 

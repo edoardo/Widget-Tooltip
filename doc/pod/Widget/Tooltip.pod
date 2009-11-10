@@ -140,7 +140,7 @@ JSAN L<http://openjsan.org/>
 
 =head1 AUTHOR
 
-Edoardo Sabadelli - L<http://www.sabadelli.it/edoardo>
+Edoardo Sabadelli, <edoardo.sabadelli@gmail.com>
 
 =head1 COPYRIGHT
 

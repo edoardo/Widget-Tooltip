@@ -8,3 +8,5 @@ META.json
 README
 tests/balloon.png
 tests/index.html
+tests/lib/DOM/Events.js
+tests/lib/JSAN.js
