@@ -1,0 +1,10 @@
+Changes
+doc/html/Widget/Tooltip.html
+doc/pod/Widget/Tooltip.pod
+doc/text/Widget/Tooltip.txt
+lib/Widget/Tooltip.js
+MANIFEST			This list of files
+README
+tests/balloon.png
+tests/index.html
+META.json

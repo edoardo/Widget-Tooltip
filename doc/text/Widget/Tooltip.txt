@@ -1,0 +1,161 @@
+NAME
+
+    Widget.Tooltip - Unobtrusive javascript class for create and handle
+    tooltips
+
+SYNOPSIS
+
+     <!-- XHTML page -->
+     <p id="text1">some text...</p>
+    
+     // javascript code
+     new Widget.Tooltip({ elementId: 'text1', tooltipContent: 'tooltip for some text' });
+
+DESCRIPTION
+
+    This nice class implements some methods for adding tooltips on document
+    elements. The tooltip can contain plain text or some XHTML markup. When
+    the user moves the mouse over the reference element, the tooltip is
+    shown. By setting some configurable options is possible to control the
+    tooltip behaviour, by default the tooltip follows the mouse when is
+    moved, stops and freezes on a left button click, another click will
+    unlock the tooltip.
+
+    Tested under Firefox 2, Internet Explorer 6/7, Opera 9.
+
+METHODS
+
+ new()
+
+    Class constructor, returns a new Widget.Tooltip object.
+
+  Parameters
+
+    oProps
+
+      Object literal where must be specified the element id on which add
+      the tooltip, the tooltip content and other optional properties that
+      overwrites the defaults.
+
+      Properties are:
+
+      elementId
+
+	ID of the element on which add a tooltip. mandatory!
+
+      enableLock
+
+	Defines if the tooltip must freeze on the current mouse position by
+	clicking the reference element (default is 1=enabled, set to 0 to
+	disable).
+
+      enableMove
+
+	Defines if the tooltip must follow the mouse pointer when is moved
+	(default is 1=enabled, set to 0 to disable).
+
+      fadeOut
+
+	Time expressed in milliseconds after which the tooltip will be
+	hidden (default 0=disabled).
+
+      offsetX
+
+	Horizontal distance in pixels from the mouse pointer of the tooltip
+	top-left corner (default is 16).
+
+      offsetY
+
+	Vertical distance in pixels from the mouse pointer of the tooltip
+	top-left corner (default is 16).
+
+      tooltipClass
+
+	CSS class to assign to the tooltip div element (default is
+	`tooltip'), useful for adding some make-up to the tooltip.
+
+      tooltipContent
+
+	Content of the tooltip. Usually some text you want to show. You can
+	pass also an XHTML string. If nothing is provided, the default text
+	`Empty tooltip!' is used.
+
+ hide()
+
+    Hides the tooltip.
+
+ move()
+
+    Moves the tooltip following the mouse pointer (depending on the
+    enableMove flag setting).
+
+ show()
+
+    Shows the tooltip.
+
+ toggleLock()
+
+    Freezes/unfreezes the tooltip by switching the internal lock flag
+    (depending on the enableLock flag setting).
+
+EXAMPLES
+
+     <!-- you can initialize the class within your XHTML page like this -->
+      <p id="text1">some text...</p>
+      <p>an image<br />
+      <img src="ghost.png" /></p>
+      <p>you can also have a <a id="anchor1" href="somewhere_else">link</a> within the text on which you want to add a tooltip.</p>
+    
+      <script type="text/javascript">
+       new Widget.Tooltip({ elementId: 'text1', tooltipContent: 'tooltip for some text (fades out in 5 seconds)', fadeout: 5000 });
+       new Widget.Tooltip({ elementId: 'img1', tooltipContent: 'where is the image?!<br />click <a href="#" onclick="showImage(\'img1\')">here</a>...' });
+       new Widget.Tooltip({ elementId: 'anchor1', tooltipContent: 'a link must be clickable, so you should set enableLock to 0 on this tooltip!', enableLock: 0 });
+      </script>
+    
+     // or in a more unobtrusive way put the new in an included javascript file.
+     // be sure to call the new when the page is loaded!
+     // a cross-browser way may be this
+     if( document.addEventListener )
+     {
+         document.addEventListener(
+           'load',
+           function() {
+               new Widget.Tooltip({ elementId: 'text1', tooltipContent: 'tooltip for some text (fades out in 5 seconds)', fadeout: 5000 });
+               new Widget.Tooltip({ elementId: 'img1', tooltipContent: 'where is the image?!<br />click <a href="#" onclick="showImage(\'img1\')">here</a>...' });
+               new Widget.Tooltip({ elementId: 'anchor1', tooltipContent: 'a link must be clickable, so you should set enableLock to 0 on this tooltip!', enableLock: 0 });
+           },
+           false
+         );
+    
+         return true;
+     }
+     else if( document.attachEvent )
+     {
+         return document.attachEvent(
+           'onload',
+           function() {
+               new Widget.Tooltip({ elementId: 'text1', tooltipContent: 'tooltip for some text (fades out in 5 seconds)', fadeout: 5000 });
+               new Widget.Tooltip({ elementId: 'img1', tooltipContent: 'where is the image?!<br />click <a href="#" onclick="showImage(\'img1\')">here</a>...' });
+               new Widget.Tooltip({ elementId: 'anchor1', tooltipContent: 'a link must be clickable, so you should set enableLock to 0 on this tooltip!', enableLock: 0 });
+           }
+         );
+     }
+
+SEE ALSO
+
+    Official web page at
+    http://www.sabadelli.it/edoardo/projects/javascript/widget.tooltip
+
+    JSAN http://openjsan.org/
+
+AUTHOR
+
+    Edoardo Sabadelli - http://www.sabadelli.it/edoardo
+
+COPYRIGHT
+
+    Copyright (c) 2007 Edoardo Sabadelli. All rights reserved.
+
+    This module is free software; you can redistribute it and/or modify it
+    under the terms of the Artistic license.
+

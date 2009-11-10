@@ -1,0 +1,75 @@
+<html>
+
+<head>
+
+<title>JSAN Widget.Tooltip demo</title>
+
+<script type="text/javascript" src="../lib/Widget/Tooltip.js"></script>
+
+<style type="text/css">
+.tooltip
+{
+    background-color: #f9f9f9;
+    border: 1px dashed;
+}
+.funny
+{
+    background: url(balloon.png) no-repeat;
+    width: 226px;
+    height: 191px;
+    padding: 40px 0;
+}
+</style>
+
+</head>
+
+<body>
+
+ <h1>Widget.Tooltip demo</h1>
+
+ <p>This library provides a tooltip widget that could possibly be used to provide user hint.<br />
+    The tooltip is shown when user's mouse is over the reference object, which could be any document element.<br />
+    The content of the tooltip is given in plain text or DOM element (?!)<br />
+    When user moves the mouse, the tooltip will follow the mouse (enableMove), and when user clicks the reference object, the tooltip will freeze on current position.<br />
+    Clicking on the reference object again will release it (enableLock).</p>
+
+ <h2>Class overwrittable properties</h2>
+
+ <ul>
+  <li><code>elementId</code>: mandatory!</li>
+  <li><code>tooltipContent</code>: tooltip content, default `Empty tooltip!'</li>
+  <li><code>tooltipClass</code>: CSS class, default tooltip</li>
+  <li><code>enableLock</code>: default 1</li>
+  <li><code>enableMove</code>: default 1</li>
+  <li><code>offsetX</code>: default 16</li>
+  <li><code>offsetY</code>: default 16</li>
+  <li><code>fadeOut</code>: milliseconds before tooltip disappearing, default 0</li>
+ </ul>
+
+ <h2>Examples</h2>
+
+ <p id="text1">Normal text in a paragraph (follow and lock)...</p>
+ <code>new Widget.Tooltip({ elementId: 'text1', tooltipContent: '&lt;b&gt;more fun:&lt;/b&gt;&lt;br /&gt;&lt;a href="http://www.sabadelli.it/edoardo/" title="click it!"&gt;&lt;img src="http://www.sabadelli.it/edoardo/gif/logo.gif" /&gt;&lt;/a&gt;' });</code>
+
+  <p>a <a href="#" id="link1">link</a> surrounded with some text (no follow, no lock, fade out)...</p>
+  <code>new Widget.Tooltip({ elementId: 'link1', enableMove: 0, enableLock: 0, tooltipContent: 'simple text' });</code>
+
+  <br /><br />
+
+  <div id="div1">
+   <code>div</code> element with a surprise!
+  </div>
+
+  <br />
+
+  <code>new Widget.Tooltip({ elementId: 'div1', enableMove: 0, tooltipContent: 'funny style&lt;a href="#"&gt;click&lt;/a&gt; inside!', tooltipClass: 'funny', offsetX: -46 });</code>
+
+  <script type="text/javascript">
+    new Widget.Tooltip({ elementId: 'text1', tooltipContent: '<b>more fun:</b><br /><a href="http://www.sabadelli.it/edoardo/" title="click it!"><img src="http://www.sabadelli.it/edoardo/gif/logo.gif" /></a>' });
+    new Widget.Tooltip({ elementId: 'link1', enableMove: 0, enableLock: 0, tooltipContent: 'simple text', fadeOut: 2000 });
+    new Widget.Tooltip({ elementId: 'div1', enableMove: 0, tooltipContent: 'funny style<br /><a href="#">click</a> inside!', tooltipClass: 'funny', offsetX: -46 });
+  </script>
+
+</body>
+
+</html>
