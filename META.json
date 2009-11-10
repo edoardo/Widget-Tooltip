@@ -7,7 +7,7 @@
         "version": 1.2,
         "url": "http://module-build.sourceforge.net/META-spec-v1.2.html"
     },
-    "version": 0.01,
+    "version": 0.02,
     "name": "Widget.Tooltip",
     "author": [
         "Edoardo Sabadelli <http://www.sabadelli.it/edoardo>"
@@ -19,7 +19,7 @@
     ],
     "provides": {
         "Widget.Tooltip": {
-            "version": 0.01,
+            "version": 0.02,
             "file": "lib/Widget/Tooltip.js"
         }
     },

@@ -23,7 +23,7 @@ Tested under Firefox 2, Internet Explorer 6/7, Opera 9.
 
 =head2 B<new()>
 
-Class constructor, returns a new Widget.Tooltip object.
+Class constructor. If the DOM element specified in the C<elementId> property exists, returns a new Widget.Tooltip object, otherwise returns the C<undefined> value.
 
 =head3 Parameters
 

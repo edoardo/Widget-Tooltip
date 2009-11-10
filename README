@@ -27,7 +27,9 @@ METHODS
 
  new()
 
-    Class constructor, returns a new Widget.Tooltip object.
+    Class constructor. If the DOM element specified in the elementId
+    property exists, returns a new Widget.Tooltip object, otherwise returns
+    the undefined value.
 
   Parameters
 

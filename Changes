@@ -1,4 +1,9 @@
 Revision history for JSAN Widget.Tooltip class
 
+0.02 Fri May  4 13:42:34 CEST 2007 
+- new(): added control on elementId mandatory parameter validity.
+  The element must exists in the DOM tree.
+  If the parameter is not supplied or the element does not exists, the new() returns the undefined value.
+
 0.01 Thu Apr 12 14:20:48 CEST 2007
 - initial release
